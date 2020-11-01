@@ -1,0 +1,48 @@
+@media( max-width: 49rem ) {
+  html {
+    font-size: 1.9vmin;
+  }
+  th div {
+    font-size: 1.6vmin;
+  }
+  .secondary th div {
+    padding: 0.7vmin 0;
+  }
+  td div {
+    padding: 0.4vmin 0;
+  }
+}
+@media( max-width: 40rem ) {
+  html {
+    font-size: 1.95vmin;
+  }
+  th div {
+    font-size: 1.8vmin;
+  }
+  .secondary th div {
+    padding: 0.9vmin 0;
+  }
+  td div {
+    padding: 0.7vmin 0;
+  }
+}
+@media( max-width: 35rem ) {
+  html {
+    font-size: 1.99vmin;
+  }
+  th div {
+    font-size: 1.9vmin;
+  }
+  .secondary th div {
+    padding: 0.9vmin 0;
+  }
+  td div {
+    padding: 1vmin 0;
+  }
+}
+@media( min-width: 60rem ) {
+  .primary {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
