@@ -1,96 +1,618 @@
-<html>
-<head>
-  <meta name="viewport" content="width=device-width">
-  
-  <style>
-* {
-  box-sizing: border-box;
-}
-table, th, td, div {
-  font-family: Arial;
-  padding: 1em;
-  border-style: solid;
-  border-collapse: collapse;
-  text-align: center;
-}
-[ colspan ] {
-  padding: 0;
-}
-div {
-  width: 3.77em;
-  height: 6em;
-  float: left;
-  border-style: none;
-}
-div:nth-of-type( 1 ) {
-  border-right-style: solid;
-  padding: 0.25em;
-}
-span {
-  writing-mode: vertical-rl;
-  position: relative;
-  top: 50%;
-  transform: translateY( -50% );
-  
-}
-div:nth-of-type( 2 ) {
-  border-style: none;
-  width: calc( 100% - 3.77em );
-  padding: 0.25em;
-  
-}
-table table, table table td {
-  padding: 0;
-  border-style: none;
-}
-table table {
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  border-style: none;
-}
-table table td:nth-of-type( 1 ) {
-  width: 3.6em;
-  border-right-style: solid;
-}
-table table tr:nth-of-type( 1 ) td {
-  border-bottom-style: solid;
-}
-table table {
-  background-color: #eee;
-  border-style: solid;
-  border-color: #444;
-}
-section {
-  width: 100%;
-  height: 100%;
-  background-color: #bbb;
-  border-color: #444;
-  border-style: solid;
-}  
-  </style>
-</head>
-<body>
-  <table>
-    <tr>
-      <td>one</td> <td>two</td> <td>three</td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        <div><section><span>four</span></section></div>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-        <div>
-          <table>
-            <tr>
-              <td>five</td> <td>six</td>
-            </tr>
-            <tr>
-              <td>seven</td> <td>eight</td>
-            </tr>
-          </table>      
-        </div>
-      </td>
-    </tr>
-  </table>
-</body>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/viewport.css">
+  </head>
+  <body>
+    <table class="primary">
+      <caption>web development reference: fundamentals</caption>
+      <thead>
+        <tr>
+          <th>html</th>
+          <th>html &amp; css</th>
+          <th>css</th>
+        </tr>
+        <tr>
+          <td>elements &amp; base attributes</td>
+          <td>attributes, selectors &amp; base properties</td>
+          <td>properties, functions, units, &amp; @rules</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <table class="secondary">
+              <tbody>
+                <tr>
+                  <th rowspan="15">
+                    <div class="hide">html elements</div>
+                    <div class="stretch">html elements</div>
+                  </th>
+                  
+                  <th colspan="3"><div>essential</div></th>
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>DOCTYPE html</div>
+                  </td>
+                  <td>
+                    <div>head</div>
+                    <div>head</div>
+                  </td> 
+                  <td>
+                    <div>meta</div>
+                  </td>                      
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>html</div>
+                    <div>html</div>
+                  </td>
+                  <td>
+                    <div>body</div>
+                    <div>body</div>
+                  </td>    
+                  <td>
+                    <div>link</div>
+                  </td>                  
+                </tr>                
+ 
+                <tr> 
+                  <th colspan="3"><div>basic</div></th>
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>div</div>
+                    <div>div</div>
+                  </td>
+                  <td>
+                    <div>h1</div>
+                    <div>h1</div>
+                  </td> 
+                  <td>
+                    <div>p</div>
+                    <div>p</div>
+                  </td>                      
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>span</div>
+                    <div>span</div>
+                  </td>
+                  <td>
+                    <div>h2</div>
+                    <div>h2</div>
+                  </td>    
+                  <td>
+                    <div>br</div>
+                  </td>                  
+                </tr>  
+                
+                <tr>
+                  <th colspan="3"><div>tables</div></th>
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>table</div>
+                    <div>table</div>
+                  </td>
+                  <td>
+                    <div>tbody</div>
+                    <div>tbody</div>
+                  </td> 
+                  <td>
+                    <div>th</div>
+                    <div>th</div>
+                  </td>                      
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>caption</div>
+                    <div>caption</div>
+                  </td>
+                  <td>
+                    <div>tr</div>
+                    <div>tr</div>
+                  </td>    
+                  <td>
+                    <div>td</div>
+                    <div>td</div>
+                  </td>                  
+                </tr>
+                
+                <tr>
+                  <th colspan="3"><div>general</div></th>
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>header</div>
+                    <div>header</div>
+                  </td>
+                  <td>
+                    <div>ul</div>
+                    <div>ul</div>
+                  </td> 
+                  <td>
+                    <div>a</div>
+                    <div>a</div>
+                  </td>                      
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>nav</div>
+                    <div>nav</div>
+                  </td>
+                  <td>
+                    <div>li</div>
+                    <div>li</div>
+                  </td>    
+                  <td>
+                    <div>img</div>
+                  </td>                  
+                </tr>    
+                
+                <tr>
+                  <th colspan="3"><div>additional</div></th>
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>main</div>
+                    <div>main</div>
+                  </td>
+                  <td>
+                    <div>thead</div>
+                    <div>thead</div>
+                  </td> 
+                  <td>
+                    <div>input</div>
+                    <div>input</div>
+                  </td>                      
+                </tr>
+                <tr class="elements">
+                  <td>
+                    <div>footer</div>
+                    <div>footer</div>
+                  </td>
+                  <td>
+                    <div>tfoot</div>
+                    <div>tfoot</div>
+                  </td>    
+                  <td>
+                    <div>label</div>
+                    <div>label</div>
+                  </td>                  
+                </tr>   
+                
+                <tr>
+                  <th rowspan="3">
+                    <div class="hide">html attributes</div>
+                    <div class="stretch">html attributes</div>
+                  </th>
+                  
+                  <th colspan="3"><div>essential</div></th>
+                </tr>
+                <tr class="attributes">
+                  <td>
+                    <div>charset</div>
+                    <div>utf-8</div>
+                    <div>meta</div>
+                  </td>
+                  <td>
+                    <div>name</div>
+                    <div>viewport</div>
+                    <div>meta</div>
+                  </td> 
+                  <td>
+                    <div>rel</div>
+                    <div>stylesheet</div>
+                    <div>link</div>
+                  </td>                      
+                </tr>
+                <tr class="attributes">
+                  <td>
+                    <div>src</div>
+                    <div>image.png</div>
+                    <div>img</div>
+                  </td>
+                  <td>
+                    <div>content</div>
+                    <div class="small">width=device-width</div>
+                    <div>meta</div>
+                  </td>    
+                  <td>
+                    <div>href</div>
+                    <div>base.css</div>
+                    <div>link</div>
+                  </td>                  
+                </tr>                 
+              </tbody>              
+            </table>
+          </td>
+          
+          
+          <td>
+            <table class="secondary">
+              <tbody>
+                <tr>
+                  <th rowspan="3">
+                    <div class="hide">html attributes</div>
+                    <div class="stretch">html attributes</div>
+                  </th>
+                  
+                  <th colspan="3"><div>basic</div></th>
+                </tr>
+                <tr class="attributes">
+                  <td>
+                    <div>class</div>
+                    <div><i>string</i></div>
+                    <div><i>element</i></div>
+                  </td>
+                  <td>
+                    <div>colspan</div>
+                    <div><i>number</i></div>
+                    <div>td</div>
+                  </td> 
+                  <td>
+                    <div>type</div>
+                    <div>checkbox</div>
+                    <div>input</div>
+                  </td>                      
+                </tr>
+                <tr class="attributes">
+                  <td>
+                    <div>id</div>
+                    <div><i>string</i></div>
+                    <div><i>element</i></div>
+                  </td>
+                  <td>
+                    <div>rowspan</div>
+                    <div><i>number</i></div>
+                    <div>td</div>
+                  </td>    
+                  <td>
+                    <div>for</div>
+                    <div><i>element id</i></div>
+                    <div>label</div>
+                  </td>                  
+                </tr>                
+ 
+                <tr>
+                  <th rowspan="9">
+                    <div class="hide">css selectors</div>
+                    <div class="stretch">css selectors</div>
+                  </th> 
+                  
+                  <th colspan="3"><div>essential</div></th>
+                </tr>
+                <tr class="selectors">
+                  <td>
+                    <div>Element</div>
+                    <div>html</div>
+                  </td>
+                  <td>
+                    <div>Class</div>
+                    <div>.class</div>
+                  </td> 
+                  <td>
+                    <div>Descendant</div>
+                    <div>.class span</div>
+                  </td>                      
+                </tr>
+                <tr class="selectors">
+                  <td>
+                    <div>List</div>
+                    <div>html, body</div>
+                  </td>
+                  <td>
+                    <div>Id</div>
+                    <div>#id</div>
+                  </td>    
+                  <td>
+                    <div>General sibling</div>
+                    <div>h2 ~ p</div>
+                  </td>                  
+                </tr>  
+                
+                <tr>
+                  <th colspan="3"><div>basic</div></th>
+                </tr>
+                <tr class="selectors">
+                  <td>
+                    <div>Selection</div>
+                    <div>::selection</div>
+                  </td>
+                  <td>
+                    <div>Nth</div>
+                    <div>nth-of-type( <i>n</i> )</div>
+                  </td> 
+                  <td>
+                    <div>Adjacent</div>
+                    <div>h2 + p</div>
+                  </td>                      
+                </tr>
+                <tr class="selectors">
+                  <td>
+                    <div>Universal</div>
+                    <div>*</div>
+                  </td>
+                  <td>
+                    <div>Attribute</div>
+                    <div>[ href ]</div>
+                  </td>    
+                  <td>
+                    <div>Child</div>
+                    <div>div > span</div>
+                  </td>                  
+                </tr>  
+                
+                <tr>
+                  <th colspan="3"><div>general</div></th>
+                </tr>
+                <tr class="selectors">
+                  <td>
+                    <div>Hover</div>
+                    <div>a:hover</div>
+                  </td>
+                  <td>
+                    <div>Anchor</div>
+                    <div>a:link</div>
+                  </td> 
+                  <td>
+                    <div>After</div>
+                    <div>::after</div>
+                  </td>                      
+                </tr>
+                <tr class="selectors">
+                  <td>
+                    <div>Click</div>
+                    <div>a:active</div>
+                  </td>
+                  <td>
+                    <div>Checked</div>
+                    <div>:checked</div>
+                  </td>    
+                  <td>
+                    <div>Before</div>
+                    <div>::before</div>
+                  </td>                  
+                </tr>    
+                
+                <tr>
+                  <th rowspan="6">
+                    <div class="hide">css properties</div>
+                    <div class="stretch">css properties</div>
+                  </th> 
+                  
+                  <th colspan="3"><div>display &amp; layout</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>display</div>
+                  </td>
+                  <td>
+                    <div>float</div>
+                  </td> 
+                  <td>
+                    <div>justify-content</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>overflow</div>
+                  </td>
+                  <td>
+                    <div>clear</div>
+                  </td>    
+                  <td>
+                    <div>align-items</div>
+                  </td>                  
+                </tr>    
+                
+                <tr>
+                  <th colspan="3"><div>position</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>position</div>
+                  </td>
+                  <td>
+                    <div>top</div>
+                  </td> 
+                  <td>
+                    <div>right</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>z-index</div>
+                  </td>
+                  <td>
+                    <div>left</div>
+                  </td>    
+                  <td>
+                    <div>bottom</div>
+                  </td>                  
+                </tr>                 
+              </tbody>              
+            </table>            
+          </td>
+          <td>
+            <table class="secondary">
+              <tbody>
+                <tr>
+                  <th rowspan="15">
+                    <div class="hide">css properties</div>
+                    <div class="stretch">css properties</div>
+                  </th>
+                  
+                  <th colspan="3"><div>box model</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>width</div>
+                  </td>
+                  <td>
+                    <div>padding</div>
+                  </td> 
+                  <td>
+                    <div>border</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>height</div>
+                  </td>
+                  <td>
+                    <div>margin</div>
+                  </td>    
+                  <td>
+                    <div>outline</div>
+                  </td>                  
+                </tr>                
+ 
+                <tr>
+                  <th colspan="3"><div>enhancments</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>background-color</div>
+                  </td>
+                  <td>
+                    <div>background-image</div>
+                  </td> 
+                  <td>
+                    <div>border-radius</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>color</div>
+                  </td>
+                  <td>
+                    <div>list-style-type</div>
+                  </td>    
+                  <td>
+                    <div>box-shadow</div>
+                  </td>                  
+                </tr>     
+                
+                <tr>
+                  <th colspan="3"><div>text</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>font-family</div>
+                  </td>
+                  <td>
+                    <div>font-weight</div>
+                  </td> 
+                  <td>
+                    <div>text-align</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>font-size</div>
+                  </td>
+                  <td>
+                    <div>font-style</div>
+                  </td>    
+                  <td>
+                    <div>text-transform</div>
+                  </td>                  
+                </tr>
+                
+                <tr>
+                  <th colspan="3"><div>extended text</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>letter-spacing</div>
+                  </td>
+                  <td>
+                    <div>line-height</div>
+                  </td> 
+                  <td>
+                    <div>writing-mode</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>word-spacing</div>
+                  </td>
+                  <td>
+                    <div>white-space</div>
+                  </td>    
+                  <td>
+                    <div>content</div>
+                  </td>                  
+                </tr>     
+                
+                <tr>
+                  <th colspan="3"><div>general</div></th>
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>box-sizing</div>
+                  </td>
+                  <td>
+                    <div>border-collapse</div>
+                  </td> 
+                  <td>
+                    <div>transition</div>
+                  </td>                      
+                </tr>
+                <tr class="properties">
+                  <td>
+                    <div>opacity</div>
+                  </td>
+                  <td>
+                    <div>border-spacing</div>
+                  </td>    
+                  <td>
+                    <div>animation</div>
+                  </td>                  
+                </tr>    
+                
+                <tr>
+                  <th rowspan="3">
+                    <div class="hide">CSS MISC</div>
+                    <div class="stretch">CSS MISC</div>
+                  </th> 
+                  
+                  <th colspan="3"><div>functions, units, &amp; @rules</div></th>
+                </tr>
+                <tr>
+                  <td>
+                    <div>linear-gradient<b>( )</b></div>
+                  </td>
+                  <td>
+                    <div>%</div>
+                  </td> 
+                  <td>
+                    <div>@media</div>
+                  </td>                      
+                </tr>
+                <tr>
+                  <td>
+                    <div>calc<b>( )</b></div>
+                  </td>
+                  <td>
+                    <div>rem</div>
+                  </td>    
+                  <td>
+                    <div>@keyframes</div>
+                  </td>                  
+                </tr>                 
+              </tbody>              
+            </table>               
+          </td>          
+        </tr>      
+      </tbody>
+    </table>
+  </body>
 </html>
